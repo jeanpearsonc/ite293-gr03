@@ -10,10 +10,11 @@ Enter First Number:
 Enter Second Number:  
 <input type="number" name="number2" /><br><br>  
 <input  type="submit" name="submit" value="sagot">  
-<?php  
+<?php
+    session_start();
     if(isset($_POST['submit']))  
     {  
-        $number1 = $_POST['number1'];  
+        $number1 = $_Session['number1'];  
         $number2 = $_POST['number2']; 
 
         $c = $number1 + $number2;
